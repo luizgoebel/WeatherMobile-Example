@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherMobile.APP", "src\WeatherMobile.APP\WeatherMobile.APP.csproj", "{84F46630-3C6D-4EFA-8A10-7E66C32628F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WheatherMobile.Services", "src\WheatherMobile.Services\WheatherMobile.Services.csproj", "{895BC24D-6A21-42B4-A45C-359109157C89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMobile.Services", "src\WeatherMobile.Services\WeatherMobile.Services.csproj", "{BFB7A56A-AF15-4468-ADA4-10AFA5437FDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WheatherMobile.ServicesClient", "src\WheatherMobile.ServicesClient\WheatherMobile.ServicesClient.csproj", "{62475CFD-4169-47CC-94E7-14A9B94D603A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMobile.ServicesClient", "src\WeatherMobile.ServicesClient\WeatherMobile.ServicesClient.csproj", "{A527A272-D12E-45B0-BD27-7FC1083C1D9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +21,14 @@ Global
 		{84F46630-3C6D-4EFA-8A10-7E66C32628F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84F46630-3C6D-4EFA-8A10-7E66C32628F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{84F46630-3C6D-4EFA-8A10-7E66C32628F7}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{895BC24D-6A21-42B4-A45C-359109157C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{895BC24D-6A21-42B4-A45C-359109157C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{895BC24D-6A21-42B4-A45C-359109157C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{895BC24D-6A21-42B4-A45C-359109157C89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62475CFD-4169-47CC-94E7-14A9B94D603A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62475CFD-4169-47CC-94E7-14A9B94D603A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62475CFD-4169-47CC-94E7-14A9B94D603A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62475CFD-4169-47CC-94E7-14A9B94D603A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB7A56A-AF15-4468-ADA4-10AFA5437FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB7A56A-AF15-4468-ADA4-10AFA5437FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB7A56A-AF15-4468-ADA4-10AFA5437FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB7A56A-AF15-4468-ADA4-10AFA5437FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A527A272-D12E-45B0-BD27-7FC1083C1D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A527A272-D12E-45B0-BD27-7FC1083C1D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A527A272-D12E-45B0-BD27-7FC1083C1D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A527A272-D12E-45B0-BD27-7FC1083C1D9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
