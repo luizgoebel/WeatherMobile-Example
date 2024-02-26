@@ -1,4 +1,5 @@
-﻿using WeatherMobile.APP.ViewModel;
+﻿using WeatherMobile.APP.Model;
+using WeatherMobile.APP.ViewModel;
 
 namespace WeatherMobile.APP;
 
@@ -8,20 +9,15 @@ public partial class MainPage : ContentPage
 
     public MainPage(WeatherViewModel weatherViewModel)
     {
-        InitializeComponent();
         _weatherViewModel = weatherViewModel;
+        InitializeComponent();
+        BindingContext = weatherViewModel;
     }
 
-    private async void GetWeatherButton_Clicked(object sender, EventArgs e)
+    private void Picker_SelectedIndexChanged(object sender, EventArgs e)
     {
-        string cidade = cidadeEntry.Text.Trim();
-        try
-        {
-            _weatherViewModel.RecuperarPrevisao(cidade);
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert("Erro de Requisição", ex.Message, "OK");
-        }
+        Picker picker = (Picker)sender;
+        Weather weather = (Weather)picker.SelectedItem;
+        _weatherViewModel.RecuperarDadosLocalPrevisao(weather.Cidade);
     }
 }

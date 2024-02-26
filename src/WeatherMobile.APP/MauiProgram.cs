@@ -19,6 +19,7 @@ namespace WeatherMobile.APP
 
             builder.Services.AddScoped<Services.IServices.IWeatherService, WeatherService>();
             builder.Services.AddScoped<ViewModel.WeatherViewModel>();
+            builder.Services.AddScoped<MainPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

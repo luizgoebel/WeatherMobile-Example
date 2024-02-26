@@ -1,19 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WeatherMobile.APP.MainPage">
+             x:Class="WeatherMobile.APP.MainPage"
+             xmlns:viewmodel="clr-namespace:WeatherMobile.APP.ViewModel"
+             xmlns:weatherModel="clr-namespace:WeatherMobile.APP.Model"
+             x:DataType="viewmodel:WeatherViewModel"
+             Title="Previsão do tempo">
 
     <StackLayout Padding="10">
-        <Label Text="Previsão do Tempo" FontSize="24" HorizontalOptions="Center" Margin="0,20,0,20" />
 
-        <Entry Placeholder="Digite a cidade" x:Name="cidadeEntry" />
+        <VerticalStackLayout Padding="10">
+            <Label Text="{Binding Estado}" FontSize="15" />
+            <Label Text="{Binding Cidade}" FontSize="10" />
+        </VerticalStackLayout>
 
-        <Button Text="Obter Previsão" Clicked="GetWeatherButton_Clicked" HorizontalOptions="Center" Margin="0,20,0,20" />
+        <VerticalStackLayout>
+            <Picker x:Name="pickerCidade"
+                    Title="Selecione uma cidade"
+                    ItemsSource="{Binding weathers}"
+                    ItemDisplayBinding="{Binding Cidade}"
+                    SelectedItem="{Binding WeatherSelecionado}"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged">
+            </Picker>
 
-        <Label Text="Temperatura: " FontSize="18" x:Name="temperaturaLabel" />
-        <Label Text="Condição: " FontSize="18" x:Name="condicaoLabel" />
-        <Label Text="Umidade: " FontSize="18" x:Name="umidadeLabel" />
-        <Label Text="Velocidade do Vento: " FontSize="18" x:Name="velocidadeVentoLabel" />
+            <Label Text="Temperatura: " FontSize="18"/>
+            <Label Text="{Binding Temperatura}" FontSize="18" x:Name="temperaturaLabel"/>
+            <Label Text="Condição: " FontSize="18" />
+            <Label Text="{Binding Condicao}" FontSize="18" x:Name="condicaoLabel" />
+            <Label Text="Umidade: " FontSize="18" />
+            <Label Text="{Binding Umidade}" FontSize="18" x:Name="umidadeLabel" />
+            <Label Text="Velocidade do Vento: " FontSize="18" />
+            <Label Text="{Binding VelocidadeVento}" FontSize="18" x:Name="velocidadeVentoLabel" />
+        </VerticalStackLayout>
+
     </StackLayout>
 
 </ContentPage>
