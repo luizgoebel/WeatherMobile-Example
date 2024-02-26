@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using WeatherMobile.APP.Services;
 
 namespace WeatherMobile.APP
 {
@@ -15,8 +17,11 @@ namespace WeatherMobile.APP
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddScoped<Services.IServices.IWeatherService, WeatherService>();
+            builder.Services.AddScoped<ViewModel.WeatherViewModel>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
